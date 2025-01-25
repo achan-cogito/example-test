@@ -1,4 +1,8 @@
 github.com/achan-cogito/example-test v0.3.0 h1:/Ay9vkfwTpag3TcPSpnCxqTUFnXqpg8l7ILCt/rPSWU=
 github.com/achan-cogito/example-test v0.3.0/go.mod h1:21AixSF+ZbHuH0bXR2BRLwtlWEisp+rVt19booD5d30=
+github.com/achan-cogito/example-test v0.4.0 h1:iCuUVJR5Ql+Wa9MBETaH4J17DvCymRsXhDkN9E8aync=
+github.com/achan-cogito/example-test v0.4.0/go.mod h1:KcNBYV1mMRrZBsUPi8xQGJNnk88x2wqrKJi4v2r3xiw=
 github.com/achan-cogito/example-test/pkg v0.0.0-20250124234420-635afc8bfe93 h1:+qNkXW9dcFlF9TtaZMgKMyKLBHyRFTmhB9ZbfJP0Vy8=
 github.com/achan-cogito/example-test/pkg v0.0.0-20250124234420-635afc8bfe93/go.mod h1:PtTcKRcnlM0DvLZDUqui4ZQqOHmOMISkonGmeiDQytc=
+github.com/achan-cogito/example-test/user v0.0.0-20250125012526-d8b40095938a h1:2U1hd8qFU9G0+RY+vsF0PZrRvEk0876Tiyof10qRpCU=
+github.com/achan-cogito/example-test/user v0.0.0-20250125012526-d8b40095938a/go.mod h1:2hynMagj5IpqM2U8YxrEQNP0MZKbDWr7J8P4wQSpvDY=

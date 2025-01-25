@@ -1,4 +1,4 @@
-module github.com/achan-cogito/example-test
+module github.com/achan-cogito/example-test/user
 
 go 1.18
 
