@@ -1,4 +1,4 @@
-module github.com/achan-cogito/user-api-go
+module github.com/achan-cogito/example-test
 
 go 1.18
 

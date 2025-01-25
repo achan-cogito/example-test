@@ -26,7 +26,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/achan-cogito/user-api-go"
+	openapiclient "github.com/achan-cogito/example-test"
 )
 
 func main() {
@@ -100,7 +100,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/achan-cogito/user-api-go"
+	openapiclient "github.com/achan-cogito/example-test"
 )
 
 func main() {
