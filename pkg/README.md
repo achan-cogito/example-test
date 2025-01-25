@@ -1,4 +1,4 @@
-# Go API client for example-test
+# Go API client for exampletest
 
 This is an **example** API to demonstrate features of OpenAPI specification
 # Introduction
@@ -38,7 +38,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import example-test "github.com/achan-cogito/example-test"
+import exampletest "github.com/achan-cogito/example-test"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -53,18 +53,18 @@ Default configuration comes with `Servers` field that contains server objects as
 
 ### Select Server Configuration
 
-For using other server than the one defined on index 0 set context value `example-test.ContextServerIndex` of type `int`.
+For using other server than the one defined on index 0 set context value `exampletest.ContextServerIndex` of type `int`.
 
 ```go
-ctx := context.WithValue(context.Background(), example-test.ContextServerIndex, 1)
+ctx := context.WithValue(context.Background(), exampletest.ContextServerIndex, 1)
 ```
 
 ### Templated Server URL
 
-Templated server URL is formatted using default variables from configuration or from context value `example-test.ContextServerVariables` of type `map[string]string`.
+Templated server URL is formatted using default variables from configuration or from context value `exampletest.ContextServerVariables` of type `map[string]string`.
 
 ```go
-ctx := context.WithValue(context.Background(), example-test.ContextServerVariables, map[string]string{
+ctx := context.WithValue(context.Background(), exampletest.ContextServerVariables, map[string]string{
 	"basePath": "v2",
 })
 ```
@@ -75,13 +75,13 @@ Note, enum values are always validated and all unused variables are silently ign
 
 Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
 An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
-Similar rules for overriding default operation server index and variables applies by using `example-test.ContextOperationServerIndices` and `example-test.ContextOperationServerVariables` context maps.
+Similar rules for overriding default operation server index and variables applies by using `exampletest.ContextOperationServerIndices` and `exampletest.ContextOperationServerVariables` context maps.
 
 ```go
-ctx := context.WithValue(context.Background(), example-test.ContextOperationServerIndices, map[string]int{
+ctx := context.WithValue(context.Background(), exampletest.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
-ctx = context.WithValue(context.Background(), example-test.ContextOperationServerVariables, map[string]map[string]string{
+ctx = context.WithValue(context.Background(), exampletest.ContextOperationServerVariables, map[string]map[string]string{
 	"{classname}Service.{nickname}": {
 		"port": "8443",
 	},
@@ -120,7 +120,7 @@ Authentication schemes defined for the API:
 Example
 
 ```go
-auth := context.WithValue(context.Background(), example-test.ContextAccessToken, "ACCESSTOKENSTRING")
+auth := context.WithValue(context.Background(), exampletest.ContextAccessToken, "ACCESSTOKENSTRING")
 r, err := client.Service.Operation(auth, args)
 ```
 
@@ -132,7 +132,7 @@ import "golang.org/x/oauth2"
 /* Perform OAuth2 round trip request and obtain a token */
 
 tokenSource := oauth2cfg.TokenSource(createContext(httpClient), &token)
-auth := context.WithValue(oauth2.NoContext, example-test.ContextOAuth2, tokenSource)
+auth := context.WithValue(oauth2.NoContext, exampletest.ContextOAuth2, tokenSource)
 r, err := client.Service.Operation(auth, args)
 ```
 
@@ -149,8 +149,8 @@ Example
 ```go
 auth := context.WithValue(
 		context.Background(),
-		example-test.ContextAPIKeys,
-		map[string]example-test.APIKey{
+		exampletest.ContextAPIKeys,
+		map[string]exampletest.APIKey{
 			"api_key": {Key: "API_KEY_STRING"},
 		},
 	)
@@ -164,7 +164,7 @@ r, err := client.Service.Operation(auth, args)
 Example
 
 ```go
-auth := context.WithValue(context.Background(), example-test.ContextBasicAuth, example-test.BasicAuth{
+auth := context.WithValue(context.Background(), exampletest.ContextBasicAuth, exampletest.BasicAuth{
 	UserName: "username",
 	Password: "password",
 })
